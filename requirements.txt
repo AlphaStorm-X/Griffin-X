@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 google-generativeai==0.8.3
 pillow==10.4.0
 pydantic==2.8.2
 firebase-admin==6.5.0
-=======
+
 fastapi
 uvicorn[standard]
 motor
@@ -13,4 +12,3 @@ python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
 email-validator
->>>>>>> 88db97461e1eadeb1c5ab28184c215086aec3337
