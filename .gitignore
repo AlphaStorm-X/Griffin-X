@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+.venv/
+__pycache__/
+*.pyc
+dummy_pill.jpg
+wound_day3.jpg
+.env
+=======
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+>>>>>>> 88db97461e1eadeb1c5ab28184c215086aec3337

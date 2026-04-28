@@ -1,0 +1,94 @@
+{
+  "medicine_verification": {
+    "timestamp": "2024-01-15T14:30:25.789Z",
+    "image_analysis": {
+      "pill_characteristics": {
+        "shape": "Round",
+        "color": "White",
+        "imprint": "L612",
+        "size_mm": 8,
+        "scored": true
+      }
+    },
+    "verification": {
+      "medicine": "Lisinopril 10mg",
+      "dosage": "10mg once daily",
+      "status": "Safe",
+      "confidence": "High",
+      "warning": "May cause dizziness. Avoid alcohol. Report swelling of lips/tongue immediately.",
+      "action": "Take as prescribed with or without food. Take at same time each day."
+    },
+    "safety_check": {
+      "allergy_risk": "Low",
+      "interactions": ["NSAIDs may reduce effectiveness", "Potassium supplements increase risk"],
+      "contraindications": ["Pregnancy", "History of angioedema"],
+      "side_effects_common": ["Dry cough", "Dizziness", "Headache"]
+    },
+    "patient_matching": {
+      "prescribed_for": ["Hypertension", "Heart failure"],
+      "typical_patient": "Adults with high blood pressure",
+      "storage_requirements": "Room temperature, away from moisture"
+    },
+    "_metadata": {
+      "model_version": "gemini-1.5-flash",
+      "processing_time_ms": 1234,
+      "image_quality": "Good",
+      "database_verified": true
+    }
+  },
+  "example_cases": [
+    {
+      "case": "known_safe_medicine",
+      "input": "Round blue pill with 'A10' imprint",
+      "output": {
+        "medicine": "Amoxicillin 500mg",
+        "dosage": "500mg every 8-12 hours",
+        "status": "Safe",
+        "confidence": "High",
+        "warning": "Complete full course even if feeling better. Report severe diarrhea or rash.",
+        "action": "Take with food to reduce stomach upset"
+      }
+    },
+    {
+      "case": "warning_medicine",
+      "input": "Yellow oval pill with 'WAR 5'",
+      "output": {
+        "medicine": "Warfarin 5mg",
+        "dosage": "5mg once daily",
+        "status": "Warning",
+        "confidence": "High",
+        "warning": "Blood thinner - risk of bleeding. Regular INR monitoring required. Avoid activities with injury risk.",
+        "action": "Take exactly as prescribed at same time daily. Report any unusual bleeding immediately."
+      }
+    },
+    {
+      "case": "unknown_pill",
+      "input": "Unmarked green capsule",
+      "output": {
+        "medicine": "Unknown",
+        "dosage": "Unknown",
+        "status": "Unknown",
+        "confidence": "Low",
+        "warning": "Cannot identify this medication. Do not take unidentified pills.",
+        "action": "Consult pharmacist or doctor for identification. Dispose if uncertain."
+      }
+    }
+  ],
+  "status_definitions": {
+    "Safe": {
+      "description": "Common medication with standard safety profile",
+      "action": "Can be taken as directed",
+      "requires_consultation": false
+    },
+    "Warning": {
+      "description": "Medication with significant risks or interactions",
+      "action": "Consult doctor before taking",
+      "requires_consultation": true
+    },
+    "Unknown": {
+      "description": "Unable to identify or verify medication",
+      "action": "Do not take - seek professional identification",
+      "requires_consultation": true
+    }
+  }
+}

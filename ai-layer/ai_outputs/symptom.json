@@ -1,0 +1,87 @@
+{
+  "symptom_analysis": {
+    "timestamp": "2024-01-15T14:30:25.456Z",
+    "patient_context": {
+      "age": 45,
+      "gender": "Female",
+      "medical_history": ["Hypertension", "Migraine"],
+      "current_medications": ["Lisinopril 10mg"]
+    },
+    "analysis": {
+      "symptom": "Severe throbbing headache with nausea and visual aura",
+      "severity": "Moderate",
+      "trend": "Worsening",
+      "confidence": "High",
+      "advice": "Take prescribed migraine medication if available. Rest in dark quiet room. Apply cold compress. If symptoms worsen or new symptoms appear, seek medical attention within 24 hours."
+    },
+    "additional_findings": {
+      "associated_symptoms": ["Nausea", "Light sensitivity", "Sound sensitivity"],
+      "duration": "4 hours",
+      "triggers_identified": ["Bright lights", "Stress"],
+      "relief_factors": ["Dark room", "Sleep"]
+    },
+    "risk_assessment": {
+      "requires_immediate_care": false,
+      "requires_follow_up": true,
+      "follow_up_timeline": "Within 48 hours",
+      "red_flags_absent": true
+    },
+    "_metadata": {
+      "model_version": "gemini-1.5-flash",
+      "processing_time_ms": 623,
+      "input_text_length": 187
+    }
+  },
+  "example_cases": [
+    {
+      "case": "mild_cold",
+      "input": "Runny nose, sneezing, mild fatigue for 2 days",
+      "output": {
+        "symptom": "Upper respiratory symptoms",
+        "severity": "Mild",
+        "trend": "Stable",
+        "confidence": "High",
+        "advice": "Rest, stay hydrated, use saline spray. Over-the-counter cold medicine may help. Seek care if fever develops or symptoms persist beyond 7 days."
+      }
+    },
+    {
+      "case": "severe_chest_pain",
+      "input": "Crushing chest pain radiating to left arm with shortness of breath",
+      "output": {
+        "symptom": "Cardiac-type chest pain",
+        "severity": "Severe",
+        "trend": "Worsening",
+        "confidence": "High",
+        "advice": "EMERGENCY - Call 911 immediately. This could be a heart attack. Do not drive yourself. Chew aspirin if not allergic."
+      }
+    },
+    {
+      "case": "improving_condition",
+      "input": "Sore throat and cough getting better after 3 days of rest",
+      "output": {
+        "symptom": "Viral upper respiratory infection",
+        "severity": "Mild",
+        "trend": "Improving",
+        "confidence": "High",
+        "advice": "Continue rest and hydration. Symptoms should resolve in 2-3 days. Return to normal activities gradually."
+      }
+    }
+  ],
+  "severity_scale": {
+    "Mild": {
+      "description": "Minor discomfort, does not affect daily activities",
+      "action": "Home care, monitor symptoms",
+      "urgency": "Non-urgent"
+    },
+    "Moderate": {
+      "description": "Significant discomfort, affects some daily activities",
+      "action": "Consider medical consultation within 24-48 hours",
+      "urgency": "Can wait for appointment"
+    },
+    "Severe": {
+      "description": "Severe pain or disability, prevents normal activities",
+      "action": "Seek immediate medical attention",
+      "urgency": "Emergency or urgent care required"
+    }
+  }
+}

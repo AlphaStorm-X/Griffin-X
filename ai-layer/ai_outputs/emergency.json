@@ -1,0 +1,65 @@
+{
+  "emergency_detection": {
+    "timestamp": "2024-01-15T14:30:25.123Z",
+    "input_type": "video_frame",
+    "analysis": {
+      "event": "Fall detected - person on floor motionless",
+      "risk": "High",
+      "confidence": "High",
+      "action": "Call emergency services immediately (911). Do not move the person unless in danger.",
+      "message": "Individual appears to have fallen and is unresponsive. Immediate medical attention required."
+    },
+    "severity_indicators": {
+      "motion_detected": false,
+      "responsive": false,
+      "bleeding_visible": true,
+      "distress_sounds": true
+    },
+    "emergency_contacts_notified": false,
+    "recommended_response": {
+      "immediate": "Activate emergency protocol - call 911",
+      "first_aid": "Check breathing and pulse. Do not move neck/spine.",
+      "follow_up": "Stay with patient until help arrives"
+    },
+    "_metadata": {
+      "model_version": "gemini-1.5-flash",
+      "processing_time_ms": 845,
+      "confidence_threshold": 0.85
+    }
+  },
+  "example_cases": [
+    {
+      "case": "fall_high_risk",
+      "input": "Video frame showing person falling and lying still",
+      "output": {
+        "event": "Fall with possible injury",
+        "risk": "High",
+        "confidence": "High",
+        "action": "Call 911 immediately",
+        "message": "Elderly person fell and is not moving"
+      }
+    },
+    {
+      "case": "distress_medium_risk",
+      "input": "Audio: 'I'm having trouble breathing'",
+      "output": {
+        "event": "Respiratory distress",
+        "risk": "Medium",
+        "confidence": "High",
+        "action": "Check oxygen levels, position upright, call doctor",
+        "message": "Patient reports breathing difficulty"
+      }
+    },
+    {
+      "case": "no_emergency",
+      "input": "Person walking normally in room",
+      "output": {
+        "event": "No emergency detected",
+        "risk": "Low",
+        "confidence": "High",
+        "action": "Continue routine monitoring",
+        "message": "Normal activity observed"
+      }
+    }
+  ]
+}

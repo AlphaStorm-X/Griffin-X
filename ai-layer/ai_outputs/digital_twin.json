@@ -1,0 +1,140 @@
+{
+  "digital_twin_profile": {
+    "profile_id": "dt_8f3a2c1e-9b4d-4e5a-8f2c-1a3b5c7d9e0f",
+    "created_at": "2024-01-15T14:30:25.999Z",
+    "last_updated": "2024-01-15T14:30:25.999Z",
+    "patient_demographics": {
+      "age": 67,
+      "gender": "Male",
+      "blood_type": "O+",
+      "allergies": ["Penicillin", "Sulfa drugs"],
+      "emergency_contact": "+1-555-123-4567"
+    },
+    "baseline_health": {
+      "key_metrics": [
+        "Blood pressure: 125/85 mmHg",
+        "Heart rate: 72 bpm",
+        "Blood sugar: 110 mg/dL (fasting)",
+        "BMI: 26.4",
+        "Oxygen saturation: 97%"
+      ],
+      "risk_factors": [
+        "Hypertension - controlled with medication",
+        "Type 2 diabetes - early stage",
+        "Sedentary lifestyle",
+        "Family history of heart disease"
+      ],
+      "chronic_conditions": [
+        "Essential hypertension",
+        "Type 2 diabetes mellitus"
+      ]
+    },
+    "recommendations": {
+      "immediate": [
+        "Monitor blood pressure twice daily for next week",
+        "Check blood sugar before breakfast",
+        "Schedule follow-up for diabetes education"
+      ],
+      "long_term": [
+        "30 minutes of moderate exercise 5 days/week",
+        "Reduce sodium intake to <1500mg daily",
+        "Annual eye exam for diabetes screening",
+        "Foot care education for diabetes management"
+      ],
+      "medication": [
+        "Take Lisinopril 10mg daily at 8 AM",
+        "Take Metformin 500mg with breakfast and dinner",
+        "Set medication reminders on phone"
+      ]
+    },
+    "alert_triggers": [
+      "Blood pressure > 140/90 for 3 consecutive days",
+      "Blood sugar > 180 mg/dL or < 70 mg/dL",
+      "Unexplained weight loss > 5 lbs in a week",
+      "Chest pain or severe headache",
+      "Vision changes or confusion"
+    ],
+    "recent_activity": {
+      "symptoms_reported": [
+        {
+          "date": "2024-01-14",
+          "symptom": "Mild morning headache",
+          "severity": "Mild",
+          "duration": "2 hours"
+        },
+        {
+          "date": "2024-01-13",
+          "symptom": "Fatigue after lunch",
+          "severity": "Mild",
+          "duration": "3 hours"
+        }
+      ],
+      "medication_adherence": "95%",
+      "vitals_trends": {
+        "blood_pressure": "Stable",
+        "blood_sugar": "Slightly elevated",
+        "weight": "Stable"
+      }
+    },
+    "care_plan": {
+      "primary_physician": "Dr. Sarah Johnson",
+      "next_appointment": "2024-02-15",
+      "care_goals": [
+        "Lower A1C to <7%",
+        "Increase physical activity",
+        "Improve medication compliance"
+      ],
+      "resources_provided": [
+        "Diabetes management guide",
+        "Blood pressure log sheet",
+        "Exercise starter program"
+      ]
+    },
+    "predictive_insights": {
+      "risk_score": 32,
+      "risk_level": "Moderate",
+      "potential_complications": [
+        "Diabetic neuropathy (15% risk in 5 years)",
+        "Hypertensive crisis (8% risk in 1 year)"
+      ],
+      "preventive_measures": [
+        "Strict blood sugar control reduces neuropathy risk by 60%",
+        "Blood pressure monitoring reduces crisis risk by 75%"
+      ]
+    },
+    "_metadata": {
+      "model_version": "gemini-1.5-flash",
+      "profile_version": "2.1",
+      "data_sources": ["Patient input", "Medical records", "Wearable devices"],
+      "last_analysis": "2024-01-15T14:30:25.999Z"
+    }
+  },
+  "example_profile": {
+    "healthy_adult": {
+      "profile_id": "dt_example_001",
+      "baseline_health": {
+        "key_metrics": ["BP: 118/75", "HR: 68", "BMI: 22.5"],
+        "risk_factors": ["None significant"]
+      },
+      "recommendations": {
+        "immediate": ["Maintain healthy lifestyle"],
+        "long_term": ["Annual checkups", "Stay active"]
+      },
+      "alert_triggers": ["New persistent symptoms", "Injury"],
+      "summary": "Generally healthy individual with no chronic conditions"
+    },
+    "complex_patient": {
+      "profile_id": "dt_example_002",
+      "baseline_health": {
+        "key_metrics": ["BP: 145/92", "HR: 82", "A1C: 8.2%"],
+        "risk_factors": ["Diabetes", "Hypertension", "High cholesterol", "Smoker"]
+      },
+      "recommendations": {
+        "immediate": ["Start prescribed medications", "Schedule diabetes education"],
+        "long_term": ["Smoking cessation program", "Cardiac rehabilitation"]
+      },
+      "alert_triggers": ["Chest pain", "Severe headache", "Vision changes"],
+      "summary": "High-risk patient requiring intensive management of multiple conditions"
+    }
+  }
+}
